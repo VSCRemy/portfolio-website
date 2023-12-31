@@ -1,54 +1,45 @@
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import devGuru from "../assets/portfolio/devGuru.png";
+import dreamHome from "../assets/portfolio/dreamHome.png";
+import newCastle from "../assets/portfolio/newCastle.png";
 
 function Portfolio() {
   const portfolios = [
     {
       id: 1,
-      src: arrayDestruct,
-      demolink: "",
-      codelink: "",
+      src: devGuru,
+      demolink: "https://devguru.netlify.app/",
+      codelink: "https://github.com/VSCRemy/dev-guru-landing-page",
     },
     {
       id: 2,
-      src: reactParallax,
-      demolink: "",
-      codelink: "",
+      src: newCastle,
+      demolink: "https://newcastleclothing.netlify.app/",
+      codelink: "https://github.com/VSCRemy/newcastle-mini-ecommerce-project",
     },
     {
       id: 3,
-      src: navbar,
-      demolink: "",
-      codelink: "",
-    },
-    {
-      id: 4,
-      src: reactSmooth,
-      demolink: "",
-      codelink: "",
-    },
-    {
-      id: 5,
-      src: installNode,
-      demolink: "",
-      codelink: "",
-    },
-    {
-      id: 6,
-      src: reactWeather,
-      demolink: "",
-      codelink: "",
+      src: dreamHome,
+      demolink: "https://dreamhomerentals.netlify.app/",
+      codelink: "https://github.com/VSCRemy/real-state-project",
     },
   ];
+
+  const handleDemoClick = (demolink) => {
+    if (demolink) {
+      window.open(demolink, "_blank");
+    }
+  };
+
+  const handleCodeClick = (codelink) => {
+    if (codelink) {
+      window.open(codelink, "_blank");
+    }
+  };
 
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen "
+      className="bg-gradient-to-b from-black to-gray-900 w-full text-white md:h-screen "
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -67,10 +58,16 @@ function Portfolio() {
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button
+                  onClick={() => handleDemoClick(demolink)}
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                >
                   Demo
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button
+                  onClick={() => handleCodeClick(codelink)}
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                >
                   Code
                 </button>
               </div>

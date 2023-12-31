@@ -6,7 +6,7 @@ function Home() {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-700"
+      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-900"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
@@ -14,9 +14,11 @@ function Home() {
             I am a <span className="text-rose-800">Front-End Developer</span>
           </h2>
           <p className="text-gray-300 py-4 max-w-md">
-            I have over year experience in building and designing websites. I
-            love working on web application techologies with JavaScript, React
-            and Tailwind CSS.
+            🚀 Front-End Developer with 1 year of hands-on experience,
+            specializing in creating visually stunning and highly functional
+            websites. Passionate about crafting seamless user experiences
+            through clean, efficient code. Let's bring your digital vision to
+            life! 🌐💻
           </p>
           <div>
             <button className=" text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-rose-800 to to-rose-650 cursor-pointer hover:scale-110 duration-300">
