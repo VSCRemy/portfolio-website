@@ -1,6 +1,7 @@
 import React from "react";
 import heroImage from "../assets/heroImage.png";
 import { FaDownload } from "react-icons/fa";
+import resume from "../assets/resume.pdf";
 
 function Home() {
   return (
@@ -21,12 +22,14 @@ function Home() {
             life! 🌐💻
           </p>
           <div>
-            <button className=" text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-rose-800 to to-rose-650 cursor-pointer hover:scale-110 duration-300">
-              Resume
-              <span className=" duration-300 ml-1">
-                <FaDownload size={18} />
-              </span>
-            </button>
+            <a href={resume} download="resume.pdf">
+              <button className=" text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-rose-800 to to-rose-650 cursor-pointer hover:scale-110 duration-300">
+                Resume
+                <span className=" duration-300 ml-1">
+                  <FaDownload size={18} />
+                </span>
+              </button>
+            </a>
           </div>
         </div>
 
